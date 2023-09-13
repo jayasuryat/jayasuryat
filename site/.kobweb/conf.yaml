@@ -1,0 +1,14 @@
+site:
+  title: "Jaya Surya Thotapalli"
+
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/developmentExecutable/jayasuryat.js"
+      api: "build/libs/jayasuryat.jar"
+    prod:
+      script: "build/distributions/jayasuryat.js"
+      siteRoot: ".kobweb/site"
+
+  port: 8080
