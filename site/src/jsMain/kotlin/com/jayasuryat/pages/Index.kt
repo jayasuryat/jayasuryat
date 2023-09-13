@@ -3,7 +3,7 @@ package com.jayasuryat.pages
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import com.jayasuryat.pages.mobile.MobileRoot
-import com.jayasuryat.pages.standard.DesktopRoot
+import com.jayasuryat.pages.desktop.DesktopRoot
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize

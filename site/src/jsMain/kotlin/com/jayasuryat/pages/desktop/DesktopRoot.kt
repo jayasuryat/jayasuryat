@@ -1,4 +1,4 @@
-package com.jayasuryat.pages.standard
+package com.jayasuryat.pages.desktop
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -16,12 +16,8 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
-import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.css.vh
-import org.jetbrains.compose.web.css.vw
-import org.jetbrains.compose.web.dom.Span
-import org.jetbrains.compose.web.dom.Tbody
-import org.jetbrains.compose.web.dom.Text
+import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.*
 
 @Composable
 internal fun DesktopRoot(
@@ -120,7 +116,6 @@ private fun Content(
     bottomRight: @Composable () -> Unit,
 ) {
 
-
     val padding = 16
 
     Box(
@@ -196,10 +191,10 @@ private fun Name(
         verticalArrangement = Arrangement.Center,
     ) {
 
-        Tbody(
+        Span(
             attrs = {
                 style {
-                    property("color", "white")
+                    property("color", "#FFFFFF")
                     property("font-family", "Lily Script One")
                     property("font-weight", "bold")
                     property("font-size", "22px")
@@ -214,7 +209,7 @@ private fun Name(
             verticalAlignment = Alignment.Bottom,
         ) {
 
-            Tbody(
+            Span(
                 attrs = {
                     style {
                         property("color", "white")
@@ -229,7 +224,7 @@ private fun Name(
             )
 
             if (showCursor.value) {
-                Tbody(
+                Span(
                     attrs = {
                         style {
                             property("color", "white")
@@ -270,7 +265,7 @@ private fun ProfileInfo(
             .padding(all = 8.px),
     ) {
 
-        Tbody(
+        Span(
             attrs = {
                 style {
                     property("color", "#D9D9D9")
@@ -294,10 +289,8 @@ private fun ProfileInfo(
                 Span(
                     attrs = {
                         style {
+                            property("color", "#c813dd")
                             property("font-weight", "600")
-                            property("background", "-webkit-linear-gradient(rgb(130,79,254), rgb(227,70,92))")
-                            property("-webkit-background-clip", "text")
-                            property("-webkit-text-fill-color", "transparent")
                         }
                     },
                 ) { Text("Kotlin") }
@@ -312,7 +305,7 @@ private fun ProfileInfo(
         ) {
 
             Column {
-                Tbody(
+                Span(
                     attrs = {
                         style {
                             property("color", "#D9D9D9")
@@ -345,7 +338,7 @@ private fun ProfileInfo(
             Column(
                 horizontalAlignment = Alignment.End,
             ) {
-                Tbody(
+                Span(
                     attrs = {
                         style {
                             property("color", "#D9D9D9")
