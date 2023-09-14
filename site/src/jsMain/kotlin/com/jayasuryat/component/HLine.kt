@@ -1,4 +1,4 @@
-package com.jayasuryat.components
+package com.jayasuryat.component
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Box

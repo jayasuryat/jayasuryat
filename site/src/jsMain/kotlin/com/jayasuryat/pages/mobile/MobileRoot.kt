@@ -1,21 +1,20 @@
 package com.jayasuryat.pages.mobile
 
 import androidx.compose.runtime.Composable
-import com.jayasuryat.components.HLine
-import com.jayasuryat.components.VLine
+import com.jayasuryat.component.HLine
+import com.jayasuryat.component.VLine
+import com.jayasuryat.util.*
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.compose.ui.styleModifier
 import com.varabyte.kobweb.navigation.OpenLinkStrategy
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.navigation.Link
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Span
-import org.jetbrains.compose.web.dom.Tbody
 import org.jetbrains.compose.web.dom.Text
 
 @Composable
@@ -24,8 +23,7 @@ internal fun MobileRoot(
 ) {
 
     Box(
-        modifier = modifier
-            .styleModifier { background("#000000") },
+        modifier = modifier,
     ) {
 
         BG(
@@ -96,13 +94,13 @@ private fun Content(
                     .height(4.vh)
             )
 
-            Tbody(
+            Span(
                 attrs = {
                     style {
-                        property("color", "#a6a6a6")
-                        property("font-family", "Lily Script One")
-                        property("font-weight", "bold")
-                        property("font-size", "16px")
+                        LilyScriptOneFont(
+                            color = Color.chalice,
+                            size = 16.px,
+                        )
                     }
                 },
                 content = {
@@ -116,13 +114,14 @@ private fun Content(
                     .height(4.px)
             )
 
-            Tbody(
+            Span(
                 attrs = {
                     style {
-                        property("color", "white")
-                        property("font-family", "JetBrains Mono")
-                        property("font-weight", "600")
-                        property("font-size", "32px")
+                        JetbrainsMonoFont(
+                            color = Color.onBackground,
+                            size = 32.px,
+                            weight = 600,
+                        )
                     }
                 },
                 content = {
@@ -137,14 +136,15 @@ private fun Content(
                 .padding(left = 4.vh, right = 4.vh)
                 .align(Alignment.Center)
         ) {
-            Tbody(
+            Span(
                 attrs = {
                     style {
-                        property("color", "#D9D9D9")
-                        property("font-family", "Poppins")
-                        property("font-size", "18px")
-                        property("font-weight", "300")
-                        property("text-align", "center")
+                        PoppinsFont(
+                            color = Color.onBackgroundVariant,
+                            size = 18.px,
+                            weight = 300,
+                        )
+                        textAlign("center")
                     }
                 },
                 content = {
@@ -153,8 +153,8 @@ private fun Content(
                     Span(
                         attrs = {
                             style {
-                                property("color", "#2edf85")
-                                property("font-weight", "600")
+                                color(Color.android.toColor())
+                                fontWeight(600)
                             }
                         },
                     ) { Text("Android") }
@@ -162,10 +162,8 @@ private fun Content(
                     Span(
                         attrs = {
                             style {
-                                property("font-weight", "600")
-                                property("background", "-webkit-linear-gradient(rgb(130,79,254), rgb(227,70,92))")
-                                property("-webkit-background-clip", "text")
-                                property("-webkit-text-fill-color", "transparent")
+                                color(Color.kotlin.toColor())
+                                fontWeight(600)
                             }
                         },
                     ) { Text("Kotlin") }
@@ -181,13 +179,14 @@ private fun Content(
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
 
-            Tbody(
+            Span(
                 attrs = {
                     style {
-                        property("color", "#D9D9D9")
-                        property("font-family", "Poppins")
-                        property("font-size", "14px")
-                        property("font-weight", "100")
+                        PoppinsFont(
+                            color = Color.onBackgroundVariant,
+                            size = 14.px,
+                            weight = 100,
+                        )
                     }
                 },
                 content = {
@@ -205,7 +204,7 @@ private fun Content(
                 Image(
                     modifier = Modifier
                         .size(54.px),
-                    src = "github_r.svg",
+                    src = "ic_github.svg",
                 )
             }
 
@@ -214,14 +213,14 @@ private fun Content(
                     .height(16.px)
             )
 
-            Tbody(
+            Span(
                 attrs = {
                     style {
-                        property("color", "#D9D9D9")
-                        property("color", "#D9D9D9")
-                        property("font-family", "Poppins")
-                        property("font-size", "14px")
-                        property("font-weight", "100")
+                        PoppinsFont(
+                            color = Color.onBackgroundVariant,
+                            size = 14.px,
+                            weight = 100,
+                        )
                     }
                 },
                 content = {
@@ -244,7 +243,7 @@ private fun Content(
                         modifier = Modifier
                             .size(54.px)
                             .onClick { },
-                        src = "linkedin_r.svg",
+                        src = "ic_linkedin.svg",
                     )
                 }
 
@@ -259,7 +258,7 @@ private fun Content(
                         modifier = Modifier
                             .size(54.px)
                             .onClick { },
-                        src = "email_r.svg",
+                        src = "ic_email.svg",
                     )
                 }
 
@@ -273,7 +272,7 @@ private fun Content(
                         modifier = Modifier
                             .size(54.px)
                             .onClick { },
-                        src = "twitter_r.svg",
+                        src = "ic_twitter.svg",
                     )
                 }
             }
