@@ -1,6 +1,8 @@
 <div align=center>
-    <h6>Hi there 👋</h6>
-    <h2>I'm an <code>Android developer</code> from India and I love to cook <code>Kotlin</code> stuff</h2>
+    <h2>Hi there 👋<br>I'm an <code>Android developer</code> from India and I love to cook <code>Kotlin</code> stuff<br></h2>
+    <a href="http://jayasuryat.com/">
+        <img width="44px" src="icons/ic_website.svg" />
+    </a>
     <a href="https://www.linkedin.com/in/jayasuryat/">
         <img width="44px" src="icons/ic_linkedin.svg" />
     </a>
