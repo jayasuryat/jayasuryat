@@ -53,17 +53,18 @@ fun Index() {
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .height(100.vh)
             .styleModifier { background(Color.background) }
     ) {
 
         MobileRoot(
             modifier = HideForDesktopStyle.toModifier()
+                .height(100.percent)
                 .fillMaxSize(),
         )
 
         DesktopRoot(
             modifier = HideForMobileStyle.toModifier()
+                .height(100.vh)
                 .fillMaxSize(),
         )
     }
