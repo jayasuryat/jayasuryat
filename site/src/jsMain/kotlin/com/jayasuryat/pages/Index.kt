@@ -58,7 +58,7 @@ fun Index() {
 
         MobileRoot(
             modifier = HideForDesktopStyle.toModifier()
-                .height(100.percent)
+                .styleModifier { property("height", "100dvh") }
                 .fillMaxSize(),
         )
 
