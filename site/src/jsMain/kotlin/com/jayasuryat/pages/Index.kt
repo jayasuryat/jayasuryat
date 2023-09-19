@@ -7,7 +7,6 @@ import com.jayasuryat.pages.mobile.MobileRoot
 import com.jayasuryat.util.background
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.styleModifier
@@ -52,20 +51,19 @@ fun Index() {
 
     Box(
         modifier = Modifier
-            .fillMaxWidth()
             .styleModifier { background(Color.background) }
     ) {
 
         MobileRoot(
             modifier = HideForDesktopStyle.toModifier()
                 .styleModifier { property("height", "100dvh") }
-                .fillMaxSize(),
+                .fillMaxWidth(),
         )
 
         DesktopRoot(
             modifier = HideForMobileStyle.toModifier()
                 .height(100.vh)
-                .fillMaxSize(),
+                .fillMaxWidth(),
         )
     }
 }
