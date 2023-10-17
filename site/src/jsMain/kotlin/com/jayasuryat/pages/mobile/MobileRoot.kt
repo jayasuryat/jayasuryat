@@ -250,7 +250,7 @@ private fun Content(
                 Box(modifier = Modifier.width(6.px))
 
                 Link(
-                    path = "mailto:jayasurya.dc@gmail.com",
+                    path = "mailto:jayasurya.thotapalli@gmail.com",
                     openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
                 ) {
 
