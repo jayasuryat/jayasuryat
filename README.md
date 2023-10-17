@@ -15,7 +15,7 @@
     <a href="https://stackoverflow.com/users/10323788/jaya-surya-thotapalli">
         <img width="44px" src="icons/ic_stackoverflow.svg" />
     </a>
-    <a href="mailto:jayasurya.dc@gmail.com">
+    <a href="mailto:jayasurya.thotapalli@gmail.com">
         <img width="44px" src="icons/ic_email.svg" />
     </a>
     <a href="https://twitter.com/jaya_surya_t">
