@@ -388,7 +388,7 @@ private fun ProfileInfo(
                     }
 
                     Link(
-                        path = "mailto:jayasurya.dc@gmail.com",
+                        path = "mailto:jayasurya.thotapalli@gmail.com",
                         openExternalLinksStrategy = OpenLinkStrategy.IN_NEW_TAB,
                     ) {
 
